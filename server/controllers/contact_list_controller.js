@@ -11,11 +11,12 @@ exports.sendConfirmation = function(req, res, next) {
 	mail = new helper.Mail()
 	fromEmail = new helper.Email(Settings.senderEmail, Settings.senderName);
 	mail.setFrom(fromEmail)
-	mail.setSubject("Hey this is totally Jen!");
+	mail.setSubject("Please Confirm Your Email Address");
 
 	// Add mail content with success URL
 	url = Settings.url + '/success';
-	mailText = "Seriously, it's Jen! Trust me!"
+	mailText = "Thanks for signing up! Click <a href='" + url + "'>this link</a> \
+		to sign up!  This link will be active for 24 hours."
 	content = new helper.Content("text/html", mailText);
 	mail.addContent(content);
 	

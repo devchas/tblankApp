@@ -1,4 +1,4 @@
 exports.url = 'https://tony-opt-in.herokuapp.com';
-exports.senderEmail = "jennifer@sendgrid.com";
-exports.senderName = "Jennifer Litorja";
+exports.senderEmail = "hello@tonyblank.com";
+exports.senderName = "Tony Blank";
 exports.listID = 348282;
