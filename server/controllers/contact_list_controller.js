@@ -13,6 +13,9 @@ exports.sendConfirmation = function(req, res, next) {
 	mail.setFrom(fromEmail)
 	mail.setSubject("Please Confirm Your Email Address");
 
+	replyTo = new helper.Email("devin.chasanoff@sendgrid.com", "Devin Chasanoff");
+	mail.setReplyTo(replyTo);
+
 	// Add mail content with success URL
 	url = Settings.url + '/success';
 	mailText = "Thanks for signing up! Click <a href='" + url + "'>this link</a> \
